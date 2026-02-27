@@ -19,6 +19,12 @@
             background: #1a1a24;
         }
 
+        header img {
+            max-width: 200px;
+            height: auto;
+            margin-bottom: 15px;
+        }
+
         h1 {
             margin: 0;
             font-size: 2rem;
@@ -85,13 +91,13 @@
 <body>
 
 <header>
+    <img src="YOUR_IMAGE_LINK_HERE" alt="Site Logo">
     <h1>Staff Applications</h1>
     <p>Apply for Admin or Developer below</p>
 </header>
 
 <div class="container">
     <h2>Admin Application</h2>
-    <!-- Replace YOUR_FORM_ID with your Formspree form ID -->
     <form action="https://formspree.io/f/mjgezabz" method="POST">
         <input type="hidden" name="application_type" value="Admin">
 
@@ -130,13 +136,12 @@
 
 <div class="container">
     <h2>Developer Application</h2>
-    <!-- Replace YOUR_FORM_ID with your Formspree form ID -->
     <form action="https://formspree.io/f/mjgezabz" method="POST">
         <input type="hidden" name="application_type" value="Developer">
 
         <label>Which position are you applying for?</label>
         <select name="position_applying_for" required>
-            <option value="Scripter">Admin</option>
+            <option value="Scripter">Scripter</option>
             <option value="Developer" selected>Developer</option>
         </select>
 
