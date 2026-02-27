@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Staff Applications</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #0f0f14;
+            color: #ffffff;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            text-align: center;
+            padding: 30px 20px;
+            background: #1a1a24;
+        }
+
+        h1 {
+            margin: 0;
+            font-size: 2rem;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 40px auto;
+            padding: 20px;
+            background: #1c1c28;
+            border-radius: 12px;
+            box-shadow: 0 0 20px rgba(0,0,0,0.4);
+        }
+
+        h2 {
+            margin-top: 0;
+            border-bottom: 2px solid #2e2e40;
+            padding-bottom: 10px;
+        }
+
+        label {
+            display: block;
+            margin-top: 15px;
+            font-weight: bold;
+        }
+
+        input, textarea, select {
+            width: 100%;
+            padding: 10px;
+            margin-top: 5px;
+            border-radius: 6px;
+            border: none;
+            background: #2a2a3d;
+            color: white;
+        }
+
+        textarea {
+            resize: vertical;
+            min-height: 100px;
+        }
+
+        button {
+            margin-top: 20px;
+            padding: 12px;
+            width: 100%;
+            border: none;
+            border-radius: 8px;
+            background: #5865f2;
+            color: white;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        button:hover {
+            background: #4752c4;
+        }
+
+        .divider {
+            height: 40px;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Staff Applications</h1>
+    <p>Apply for Admin or Developer below</p>
+</header>
+
+<div class="container">
+    <h2>Admin Application</h2>
+    <!-- Replace YOUR_FORM_ID with your Formspree form ID -->
+    <form action="https://formspree.io/f/mjgezabz" method="POST">
+        <input type="hidden" name="application_type" value="Admin">
+
+        <label>Which position are you applying for?</label>
+        <select name="position_applying_for" required>
+            <option value="Admin" selected>Admin</option>
+            <option value="Moderator">Moderator</option>
+        </select>
+
+        <label>Full Name</label>
+        <input type="text" name="full_name" required>
+
+        <label>Discord Username</label>
+        <input type="text" name="discord" required>
+
+        <label>Age</label>
+        <input type="number" name="age" required>
+
+        <label>Timezone</label>
+        <input type="text" name="timezone" required>
+
+        <label>How active are you? (Hours per day)</label>
+        <input type="text" name="activity" required>
+
+        <label>Do you have previous admin/mod experience?</label>
+        <textarea name="experience" required></textarea>
+
+        <label>Why should we choose you?</label>
+        <textarea name="why_choose_you" required></textarea>
+
+        <button type="submit">Submit Admin Application</button>
+    </form>
+</div>
+
+<div class="divider"></div>
+
+<div class="container">
+    <h2>Developer Application</h2>
+    <!-- Replace YOUR_FORM_ID with your Formspree form ID -->
+    <form action="https://formspree.io/f/mjgezabz" method="POST">
+        <input type="hidden" name="application_type" value="Developer">
+
+        <label>Which position are you applying for?</label>
+        <select name="position_applying_for" required>
+            <option value="Scripter">Admin</option>
+            <option value="Developer" selected>Developer</option>
+        </select>
+
+        <label>Full Name</label>
+        <input type="text" name="full_name" required>
+
+        <label>Discord Username</label>
+        <input type="text" name="discord" required>
+
+        <label>Age</label>
+        <input type="number" name="age" required>
+
+        <label>Primary Programming Language</label>
+        <input type="text" name="primary_language" required>
+
+        <label>Other Languages / Skills</label>
+        <input type="text" name="other_skills">
+
+        <label>Portfolio / GitHub Link</label>
+        <input type="url" name="portfolio">
+
+        <label>Describe your past projects</label>
+        <textarea name="past_projects" required></textarea>
+
+        <label>Why do you want to join as a developer?</label>
+        <textarea name="developer_reason" required></textarea>
+
+        <button type="submit">Submit Developer Application</button>
+    </form>
+</div>
+
+</body>
+</html>
